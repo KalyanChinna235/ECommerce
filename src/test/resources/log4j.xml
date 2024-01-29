@@ -1,0 +1,20 @@
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n" />
+		</Console>
+		<File name="File" fileName="C:\Users\ADMIN\eclipse-workspace\EcommerceProject\logs" append="true">
+			<PatternLayout>
+				<Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="File" level="info" additivity="true">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>
